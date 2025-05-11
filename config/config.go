@@ -14,6 +14,7 @@ type Config struct {
 	DBName     string
 	DBSSLMode  string
 	AppPort    string
+	JwtSecret  string
 }
 
 var AppConfig *Config
@@ -31,5 +32,6 @@ func LoadConfig() {
 		DBName:     os.Getenv("DB_NAME"),
 		DBSSLMode:  os.Getenv("DB_SSL_MODE"),
 		AppPort:    os.Getenv("APP_PORT"),
+		JwtSecret:  os.Getenv("JWT_SECRET"),
 	}
 }
